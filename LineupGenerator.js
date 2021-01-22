@@ -5,12 +5,13 @@ const supportAct = ["A$AP Twelvyy", "Akala", "Akua Naru", "The Alchemist - DJ Se
 const openingAct = ["Abstract Orchestra - Full Orchestra", "Akemi Fox", "Anti Lilly", "Phoniks", "BVA", "Chimpo - DJ Set", "Chokez - DJ Set", "Clear Soul Forces", "Danny Scrilla - DJ Set", "Datkid", "DR Syntax", "Dream Mclean", "Ed Scissor", "FKJ", "Flamingosis", "Fox", "Ghostpoet", "Harry Fraud - DJ Set", "Hi5Ghost - DJ Set", "Ivy Lab - Future Beats Set", "JD. Reid", "Jungle Brown", "[ K S R ]", "KinKai", "KLIM - DJ Set", "LAUSSE THE CAT", "Layfullstop", "Mr Slipz", "Noname", "Pitch 92 - DJ Set", "Ramson Badbonez", "Res One", "Sir Hiss - DJ Set", "Sly Moon", "Smellington Piff", "Snowy", "Splurgeboys", "Stinkin Slumrock", "Strategy - DJ Set", "Sumgii - DJ Set", "TrueMendous", "Wiki", "Wish Master"];
 
 const generateLineup = (array1, array2, array3) => {
-    let headliner = array1.find(index => index = Math.floor(Math.random() * array1.length));
-    let supporter = array2.find(index => index = Math.floor(Math.random() * array2.length));
-    let opener = array3.find(index => index = Math.floor(Math.random() * array3.length));
-    return `Headline Act: ${headliner}
-            Support Act: ${supporter}
-            Opening Act: ${opener}`;
+    let headliner = Math.floor(Math.random() * array1.length);
+    let supporter = Math.floor(Math.random() * array2.length);
+    let opener = Math.floor(Math.random() * array3.length);
+    
+    console.log(`Headline Act: ${array1[headliner]}
+    Support Act: ${array2[supporter]}
+    Opening Act: ${array3[opener]}`);
 }
 
 generateLineup(headlineAct, supportAct, openingAct);

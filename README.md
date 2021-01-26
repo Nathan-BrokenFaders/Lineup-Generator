@@ -6,3 +6,7 @@
 ## Technologies
 * Javascript
 * Node
+
+## To Run
+
+Download source file and run through node.
